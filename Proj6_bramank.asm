@@ -29,14 +29,14 @@ mGetString MACRO prompt, memoryLocation, memoryLocationLength
 
 	PUSH	ECX
 	PUSH	EDX
-	MOV		ECX, memoryLocationLength
-	MOV		EDX, prompt
+	MOV	ECX, memoryLocationLength
+	MOV	EDX, prompt
 	CALL	WriteString
-	MOV		EDX, memoryLocation
+	MOV	EDX, memoryLocation
 	CALL	ReadString
-	MOV		memoryLocation, EDX
-	POP		EDX
-	POP		ECX
+	MOV	memoryLocation, EDX
+	POP	EDX
+	POP	ECX
 
 ENDM
 
